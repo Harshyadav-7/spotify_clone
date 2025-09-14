@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Joke</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    #joke-box {
+      font-size: 1.5em;
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 500px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Random Joke Generator</h1>
+  <div id="joke-box"></div>
+
+  <script>
+    // Array of jokes
+    const jokes = [
+      "Why don't skeletons fight each other? They don't have the guts.",
+      "What do you call cheese that isn't yours? Nacho cheese.",
+      "Why couldn't the bicycle stand up by itself? It was two tired.",
+      "I'm reading a book about anti-gravity. It's impossible to put down!",
+      "Why did the scarecrow win an award? Because he was outstanding in his field."
+    ];
+
+    // Get a random joke
+    const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+
+    // Display the joke
+    document.getElementById('joke-box').innerHTML = randomJoke;
+  </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects-practice</title>
+</head>
+<body>
+    <script>
+
+        // function comparePrice(product1, product2){
+        //     if(product1.price < product2.price){
+        //         return product1;
+        //     } else{
+        //         return product2;
+        //     }
+        // }
+
+        function isSameProduct(product1, product2) {
+            if(product1.name === product2.name &&
+                product2.price === product2.price
+            ){
+                return true;
+            }else {
+                return false;
+            }
+        }
+        const product1 ={
+            name: 'Basketball',
+            Price: 2095 
+        };
+
+        const product2 = {
+        Name: 'Socks',
+        price: 1090
+      };
+
+        const product3 ={
+            name: 'Basketball',
+            Price: 2095 
+        };
+        // console.log(product);
+
+        // product.Price +=500;
+        // console.log(product);
+
+        // product['Delivery-time'] = '3 Days';
+        // console.log(product);
+
+        // console.log(comparePrice(product1, product2));
+
+        // console.log(isSameProduct(product1, product2));
+        // console.log(isSameProduct(product1, product3));
+
+        console.log('Good Morning'. toLowerCase());
+        console.log('TESTING'. toLowerCase());
+
+        console.log('Hello\n' .repeat(5));
+    </script>
+</body>
+</html>
