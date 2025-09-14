@@ -22,7 +22,7 @@ function secondsToMinutesSeconds(seconds) {
 // Fetch and parse song list
 async function getSongs(folder) {
     currFolder = folder; // Update the current folder
-    const response = await fetch(`http://127.0.0.1:55703/${folder}/`);
+    const response = await fetch(`${folder}/`);
 
     if (!response.ok) {
         console.error("Failed to fetch songs. Status:", response.status);
@@ -109,7 +109,7 @@ const playMusic = (track, pause = false) => {
 
 // Display all albums
 async function displayAlbums() {
-    const response = await fetch(`http://127.0.0.1:55703/songs/`);
+    const response = await fetch(`songs/`);
     const html = await response.text();
 
     // Parse the HTML to extract album links
@@ -126,7 +126,7 @@ async function displayAlbums() {
             console.log("Extracted folder:", folder);
 
             try {
-                const res = await fetch(`http://127.0.0.1:55703/songs/${folder}/info.json`);
+                const res = await fetch(`songs/${folder}/info.json`);
                 if (!res.ok) throw new Error(`HTTP Error: ${res.status}`);
                 const data = await res.json();
 
