@@ -1,1 +1,0 @@
-console.log("Namestey Dunia5")
